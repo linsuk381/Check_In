@@ -16,8 +16,7 @@ def hupu():
         time.sleep(1)
         driver.find_element_by_xpath("//a[contains(text(),'点我签到~')]").click()
         time.sleep(1)
-        driver.find_element_by_xpath("//button[contains(text(),'我要签到')]").click()
-        driver.find_elements_by_xpath("/html/body/div[@id='layui-layer4']/div[@class='layui-layer-content layui-layer-padding']").print("success")
+        driver.find_element_by_xpath(".btn-primary:nth-child(2)").click()
     except:
         raise
     finally:

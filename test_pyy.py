@@ -41,6 +41,6 @@ class TestPyy():
     actions = ActionChains(self.driver)
     actions.move_to_element(element, 0, 0).perform()
     self.driver.find_element(By.CSS_SELECTOR, ".text-danger > span").click()
-    self.driver.find_element(By.ID, "emailInp").send_keys("706728206@qq.com")
-    self.driver.find_element(By.ID, "emailPwdInp").send_keys("Kls123456")
+    self.driver.find_element(By.ID, "emailInp").send_keys("username")
+    self.driver.find_element(By.ID, "emailPwdInp").send_keys("password")
   

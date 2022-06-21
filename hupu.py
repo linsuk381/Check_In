@@ -8,13 +8,14 @@ password = sys.argv[2] # 登录密码
 def hupu():
     try:
         driver = get_web_driver()
-        driver.get("https://www.hupu.com/")
-        driver.find_element_by_xpath("//*[@class='btn-login']").click()
-        driver.find_element_by_xpath("//*[@id='bbs-login-form_username']").send_keys(username)
-        driver.find_element_by_xpath("//*[@id='bbs-login-form_password']").send_keys(password)
-        driver.find_element_by_xpath("//*[@id='rectBottom']").click()
+        driver.get("https://leshuyun.com/login")
+        driver.find_element_by_xpath("//input[@id='emailInp']").send_keys(username)
+        driver.find_element_by_xpath("//input[@id='emailPwdInp']").send_keys(password)
+        driver.find_element_by_xpath("//button[@type='submit']").click()
         time.sleep(1)
-        driver.find_element_by_xpath("//*[@class='ant-btn ant-btn-primary ant-btn-block submit-btn']").click()
+        driver.find_element_by_xpath("//a[contains(text(),'点我签到~')]").click()
+        time.sleep(1)
+        driver.find_element_by_xpath("//button[contains(text(),'我要签到')]").click()
     except:
         raise
     finally:

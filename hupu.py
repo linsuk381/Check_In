@@ -16,7 +16,7 @@ def hupu():
         time.sleep(1)
         driver.find_element_by_xpath("//a[contains(text(),'点我签到~')]").click()
         time.sleep(1)
-        self.driver.find_element(By.CSS_SELECTOR, ".btn-primary:nth-child(2)").click()
+        driver.find_element(By.CSS_SELECTOR, ".btn-primary:nth-child(2)").click()
     except:
         raise
     finally:

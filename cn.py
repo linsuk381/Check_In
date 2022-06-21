@@ -15,7 +15,7 @@ def hupu():
         driver.find_element_by_xpath("//button[@id='login']").click()
         time.sleep(1)
         driver.find_element_by_xpath("//button[@id='checkin']").click()
-        PRINT("成功！")
+        printf("成功！")
     except:
         raise
     finally:
